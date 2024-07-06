@@ -13,6 +13,8 @@ pydantic = "^2.8.2"
 python-dotenv = "^1.0.1"
 gradio = "^4.37.2"
 edge-tts = "^6.1.12"
+requests = "^2.32.3"
+vtt-to-srt3 = "^0.2.0.1"
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.2.5"
@@ -21,3 +23,13 @@ ruff = "^0.5.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]  # I 和 UP 是 isort 和 pyupgrade
+
+[tool.ruff.format]
+quote-style = "double"

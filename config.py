@@ -10,7 +10,7 @@ class OpenAIConfig(BaseModel):
 
 
 class VisionConfig:
-    detail: Literal["low", "high", "auto"] = "high"
+    detail: Literal["low", "high", "auto"] = "low"
 
 
 class Config(BaseModel):
